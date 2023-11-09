@@ -1,5 +1,15 @@
 {
   "tasks": {
     "dev": "deno run --watch main.ts"
-  }
+  },
+  "imports": {
+    "discorddeno": "https://deno.land/x/discordeno/mod.ts"
+  },
+  "lock": true,
+  "allow": [
+    "read",
+    "net",
+    "env",
+    "all"
+  ]
 }
