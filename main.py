@@ -18,7 +18,7 @@ TOKEN = os.environ.get("DICORD_TOKEN")
 SERVER_ADDRES = os.environ.get("SERVER_ADDRES")
 SERVER_ADDRES = "mc.mochi33.com"
 SERVER_PATH = "minecraft/java/paper"  # Minecraftサーバー実行ファイルのあるフォルダのパスを入力してください
-SHELL_FILE = "start.sh"  # Minecraftサーバーを起動するシェルファイルの名前を入力してください
+SHELL_FILE = "/home/mochi/codespace/github.com/mochi/dc-minecraft/start.sh"  # Minecraftサーバーを起動するシェルファイルの名前を入力してください
 SCREEN_NAME = "steame_punk_mc"  # 使用するscreenセッションの名前を入力してください
 
 
@@ -106,7 +106,7 @@ def is_server_running():  # サーバーが動作しているか確認する関�
 
 
 def start_server():  # screenを利用してサーバーを起動するコマンドは以下になります
-    subprocess.Popen(f"screen -dmS {SCREEN_NAME} ./start.sh", shell=True)
+    subprocess.Popen(f"screen -dmS {SCREEN_NAME} bash {SHELL_FILE}", shell=True)
 
 
 client.run(TOKEN)
