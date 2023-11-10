@@ -1,2 +1,7 @@
 .env
 venv
+
+
+# Added by cargo
+
+/target
