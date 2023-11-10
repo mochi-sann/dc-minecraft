@@ -2,6 +2,7 @@ use poise::serenity_prelude as serenity;
 
 use crate::{Context, Error};
 
+/// 指定したユーザーの登録した日付を返しましす
 #[poise::command(slash_command, prefix_command)]
 pub async fn age(
     ctx: Context<'_>,
