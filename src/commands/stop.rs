@@ -1,4 +1,4 @@
-use crate::utils::server::{server_stop, is_server_running};
+use crate::utils::server::{is_server_running, server_stop};
 use crate::{Context, Error};
 
 /// サーバーを停止します
