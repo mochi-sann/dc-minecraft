@@ -1,6 +1,6 @@
 pub mod commands;
 pub mod utils;
-use commands::{age::age, ping::ping, start::start};
+use commands::{age::age, ping::ping, start::start, stop::stop};
 use std::env;
 
 use dotenv::dotenv;
@@ -32,7 +32,7 @@ async fn main() {
 
     let framework = poise::Framework::builder()
         .options(poise::FrameworkOptions {
-            commands: vec![age() , ping(), start()],
+            commands: vec![age(), ping(), start(), stop()],
             ..Default::default()
         })
         .token(token)
