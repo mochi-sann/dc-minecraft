@@ -26,14 +26,14 @@ pub async fn mochi(ctx: Context<'_>) -> Result<(), Error> {
     //             .embed(|e| e.title("モチモチﾓﾁﾓﾁﾓ(ﾉ)`ω´(ヾ)"))
     //     })
     //     .await?;
-    ctx.channel_id()
-        .send_message(&ctx, |m| {
-            m.content("Please select your favorite animal")
-                .components(|c| c.create_action_row(|row| row.add_button(button)))
-        })
-        .await
-        .unwrap();
-    ctx.say("").await?;
+    // ctx.channel_id()
+    //     .send_message(&ctx, |m| {
+    //         m.content("Please select your favorite animal")
+    //             .components(|c| c.create_action_row(|row| row.add_button(button)))
+    //     })
+    //     .await
+    //     .unwrap();
+    ctx.say(response).await?;
 
     return Ok(());
 }
